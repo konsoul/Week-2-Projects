@@ -15,8 +15,18 @@ console.log(snakeToCamel('APp_ACADEMY_iS_cOol')); // 'AppAcademyIsCool'
 
 */
 
+const snakeToCamel = (string) => {
+    let camelWords = string.split('_').map(word => {
+        return word[0].toUpperCase() + word.toLowerCase().slice(1);
+    })
+    return camelWords.join('');
+}
 
-// your code here
+
+// console.log(snakeToCamel('snakes_go_hiss')); // 'SnakesGoHiss'
+// console.log(snakeToCamel('say_hello_world')); // 'SayHelloWorld'
+// console.log(snakeToCamel('app_academy_is_cool')); // 'AppAcademyIsCool'
+// console.log(snakeToCamel('APp_ACADEMY_iS_cOol')); // 'AppAcademyIsCool'
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

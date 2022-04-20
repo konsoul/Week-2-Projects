@@ -16,8 +16,35 @@ console.log(hasThreeVowels('go home'));         //  false
 
 */
 
+const checkVowels = (wordToCheck) => {
+    const VOWELS = 'aeiou'
+    let countVowels = wordToCheck.split('').filter(char => {
+        return VOWELS.includes(char)
+    });
+    console.log(countVowels)
+    return countVowels;
+}
 
-// your code here
+const hasThreeVowels = (string) => {
+    let vowelList = checkVowels(string);
+    let vowelCounter = 0;
+
+    vowelList.forEach(vowel => {
+        vowelCounter++;
+    });
+
+    if (vowelCounter > 3) {
+        return true
+    }
+    return false
+}
+
+
+console.log(hasThreeVowels('delicious')); //  true
+console.log(hasThreeVowels('bootcamp prep')); //  true
+console.log(hasThreeVowels('bootcamp')); //  false
+console.log(hasThreeVowels('dog')); //  false
+console.log(hasThreeVowels('go home')); //  false
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

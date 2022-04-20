@@ -16,9 +16,14 @@ console.log(productWithReduce([4, 3])); // 12
 */
 
 
-// your code here
+const productWithReduce = (nums) => {
+  return nums.reduce((acc, curr) => {
+    return acc * curr;
+  }, 1)
+}
 
-
+// console.log(productWithReduce([10, 3, 5, 2])); // 300
+// console.log(productWithReduce([4, 3])); // 12
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

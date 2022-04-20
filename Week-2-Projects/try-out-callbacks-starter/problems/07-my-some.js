@@ -23,12 +23,33 @@ let result3 = mySome(['soup', 'noodles', 'bike', 'ship'], function(ele) {
 console.log(result3);   // true
 *******************************************************************************/
 
-let mySome = function() {
+let mySome = function (array, cb) {
+    let isTrue = false;
+    let newArray = array.forEach((ele, i) => {
+        if (cb(ele, i) === true) {
+            isTrue = true;
+        }
+    });
+
+    return isTrue;
 
 };
 
 
+// let result1 = mySome([5, 1, 7, 9], function (ele, i) {
+//     return ele === i;
+// });
+// console.log(result1); // true
 
+// let result2 = mySome([5, 3, 7, 9], function (ele, i) {
+//     return ele === i;
+// });
+// console.log(result2); // false
+
+// let result3 = mySome(['soup', 'noodles', 'bike', 'ship'], function (ele) {
+//     return ele.length === 4;
+// });
+// console.log(result3); // true
 
 
 

@@ -14,8 +14,20 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 */
 
-// your code here
 
+function unique(arr) {
+    return arr.reduce((acc, curr) => {
+        if (!acc.includes(curr)) {
+            acc.push(curr)
+        }
+        return acc;
+    }, []);
+}
+
+
+// console.log(unique([1, 1, 2, 3, 3])); // [1, 2, 3]
+// console.log(unique([11, 7, 8, 10, 8, 7, 7])); // [11, 7, 8, 10]
+// console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

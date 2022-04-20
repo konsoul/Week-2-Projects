@@ -26,13 +26,41 @@ console.log(twoDimensionalProduct(arr2)); // 88
 */
 
 
-// your code here
+const twoDimensionalProduct = (array) => {
+  let newArray = array.map(arrays => {
+    return arrays.reduce((acc, curr) => {
+      return acc * curr
+
+
+    }, 1);
+
+
+  });
+  return newArray.reduce((acc, curr) => {
+    return acc * curr
+  }, 1)
+}
+
+
+
+// let arr1 = [
+//   [6, 4],
+//   [5],
+//   [3, 1]
+// ];
+// console.log(twoDimensionalProduct(arr1)); // 360
+
+// let arr2 = [
+//   [11, 4],
+//   [2]
+// ];
+// console.log(twoDimensionalProduct(arr2)); // 88
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-    module.exports = twoDimensionalProduct;
+  module.exports = twoDimensionalProduct;
 } catch (e) {
-    module.exports = null;
+  module.exports = null;
 }

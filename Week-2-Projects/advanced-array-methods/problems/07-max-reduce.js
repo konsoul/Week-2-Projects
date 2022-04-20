@@ -13,11 +13,22 @@ console.log(maxWithReduce([4, 6, 3, 5, 42, 4])); // 42
 console.log(maxWithReduce([-2, -3, -7, 3])); // 3
 
 */
+//acc = 4
+//curr = 6
 
 
-// your code here
+const maxWithReduce = (nums) => {
+  return nums.reduce((acc, curr) => {
+    if (curr > acc) {
+      acc = curr;
+      // return acc;
+    }
+    return acc
+  });
+}
 
-
+// console.log(maxWithReduce([4, 6, 3, 5, 42, 4])); // 42
+// console.log(maxWithReduce([-2, -3, -7, 3])); // 3
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

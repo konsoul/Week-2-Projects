@@ -12,32 +12,43 @@ keysInObject(animals); // => ["dog", "cat", "bison"]
 keysInObject(foods); // => ["apple", "lemon", "mango"]
 ***********************************************************************/
 
-function keysInObject(obj) {
-  let keyArray = []
-  for (let key in obj) {
-    keyArray.push(key);
+const keysInObject = (obj) => {
+  let newArray = [];
+  for (let keys in obj) {
+    newArray.push(keys);
   }
-  return keyArray;
+  return newArray;
 }
 
-// // function keysInObject(obj) {
-// //   return Object.keys(obj)
-// // }
+// function keysInObject(obj) {
+//   return Object.keys(obj)
+// }
 
 
-// // let foods = {
-// //   apple: 'tart',
-// //   lemon: 'sour',
-// //   mango: 'sweet'
-// // }
+let foods = {
+  apple: 'tart',
+  lemon: 'sour',
+  mango: 'sweet'
+}
 
-// // let animals = {
-// //   dog: 'Wolfie',
-// //   cat: 'Jet',
-// //   bison: 'Bilbo'
-// // }
+let animals = {
+  dog: 'Wolfie',
+  cat: 'Jet',
+  bison: 'Bilbo'
+}
 
-// // console.log(keysInObject(animals)); // => ["dog", "cat", "bison"]
-// // console.log(keysInObject(foods)); // => ["apple", "lemon", "mango"]
+console.log(keysInObject(animals)); // => ["dog", "cat", "bison"]
+console.log(keysInObject(foods)); // => ["apple", "lemon", "mango"]
+
+
+
+
+// function keysInObject(obj) {
+//   let keyArray = []
+//   for (let key in obj) {
+//     keyArray.push(key);
+//   }
+//   return keyArray;
+// }
 // /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 // module.exports = keysInObject;

@@ -15,10 +15,22 @@ console.log(longestWord('prefer simplicity over complexity')); // 'simplicity'
 console.log(longestWord('')); // ''
 
 */
+const longestWord = (sentence) => {
+    let longestWordLength = 0;
+    let longestWord = '';
 
+    sentence.split(' ').forEach(word => {
+        if (word.length > longestWordLength) {
+            longestWordLength = word.length
+            longestWord = word;
+        }
+    });
+    return longestWord;
+}
 
-// your code here
-
+// console.log(longestWord('where did everyone go')); // 'everyone'
+// console.log(longestWord('prefer simplicity over complexity')); // 'simplicity'
+// console.log(longestWord('')); // ''
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

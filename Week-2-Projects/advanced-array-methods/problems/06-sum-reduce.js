@@ -13,8 +13,14 @@ console.log(sumWithReduce([])); // 0
 */
 
 
-// your code here
+const sumWithReduce = (nums) => {
+  return nums.reduce((acc, curr) => {
+    return acc + curr;
+  }, 0);
+}
 
+// console.log(sumWithReduce([10, 3, 5, 2])); // 20
+// console.log(sumWithReduce([])); // 0
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -12,8 +12,15 @@ console.log(removeEWords('Enter the building')); // 'building'
 
 */
 
-// your code here
+const removeEWords = (sentence) => {
+  let newWords = sentence.split(' ').filter(letter => {
+    return !letter.toLowerCase().includes('e')
+  });
+  return newWords.join(' ');
+}
 
+// console.log(removeEWords('What time is it everyone?')); // 'What is it'
+// console.log(removeEWords('Enter the building')); // 'building'
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

@@ -19,7 +19,29 @@ console.log(choosePrimes([5, 6, 4, 11, 2017])); // [ 5, 11, 2017 ]
 */
 
 
-// your code here
+const checkPrime = (numbersToCheck) => {
+    if (numbersToCheck < 2) {
+        return false;
+    }
+    for (let i = 2; i < numbersToCheck; i++) {
+        if (numbersToCheck % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+const choosePrimes = (nums) => {
+    let primesArray = nums.filter(number => {
+        return checkPrime(number);
+    });
+    return primesArray;
+}
+
+
+// console.log(choosePrimes([36, 48, 9, 13, 19])); // [ 13, 19 ]
+// console.log(choosePrimes([5, 6, 4, 11, 2017])); // [ 5, 11, 2017 ]
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
