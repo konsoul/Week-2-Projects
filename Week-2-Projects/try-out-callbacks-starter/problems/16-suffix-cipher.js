@@ -38,21 +38,31 @@ ends with. If the word does not end in any of the suffix keys, then it should no
 be modified. You can assume that only one suffix of the object will match a word.
 *******************************************************************************/
 
-let suffixCipher = function (sentence, object) {
-    let newSentence = [];
-    let keys = Object.keys(object);
-    let values = Object.values(object);
+// .endsWith()
 
-    sentence.split(' ').forEach((word) => {
-        if (word.endsWith(keys)) {
-            newSentence.push(values(word))
-        } else {
-            newSentence.push(word)
+
+
+
+let suffixCipher = function (sentence, object) {
+    let array = [];
+
+    sentence.split(' ').forEach((word, i) => {
+
+        for (let keys in object) {
+            if (word.endsWith(keys)) {
+                array.push(object[keys](word))
+            }
         }
+
+        if (array.length < i + 1) {
+            array.push(word);
+        }
+
     });
 
-    return newSentence.join(' ')
-};
+    return array.join(' ')
+}
+
 
 
 // let cipher1 = {
@@ -75,7 +85,10 @@ let suffixCipher = function (sentence, object) {
 //     }
 // };
 // console.log(suffixCipher('incremental progress is very instrumental', cipher2));
-// // INCREMENTAL progressth isth very INSTRUMENTAL
+// INCREMENTAL progressth isth very INSTRUMENTAL
+
+
+
 
 
 

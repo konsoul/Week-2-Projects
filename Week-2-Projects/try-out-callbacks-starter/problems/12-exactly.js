@@ -27,6 +27,7 @@ exactly `number` elements of the array that return true when passed into the cal
 
 *******************************************************************************/
 
+
 let exactly = function (array, n, cb) {
     let count = 0;
     let booleanArray = array.map(ele => {
@@ -42,7 +43,6 @@ let exactly = function (array, n, cb) {
     }
     return false
 };
-
 
 // let result1 = exactly([18, 5, 32, 7, 100], 3, function (n) {
 //     return n % 2 === 0;
@@ -63,7 +63,6 @@ let exactly = function (array, n, cb) {
 //     return str.includes('x');
 // });
 // console.log(result4); // true
-
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

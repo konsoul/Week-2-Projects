@@ -20,6 +20,7 @@ let minValueCallback = function (array, cb) {
         let minWithoutCallback = array.map(ele => {
             return (cb(ele))
         });
+        console.log(minWithoutCallback)
         return Math.min(...minWithoutCallback);
     }
 

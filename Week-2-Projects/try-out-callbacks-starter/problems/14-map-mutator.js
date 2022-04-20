@@ -1,7 +1,5 @@
 /*******************************************************************************
-Write a function `mapMutator` that accepts an array and a callback as arguments.
-The function should pass each element and index into the callback and use the result
-to overwrite elements of the original array, mutating the array.
+
 
 Examples:
 
@@ -16,17 +14,20 @@ mapMutator(arr2, function (el, i) {
     return el * i;
 });
 console.log(arr2); // [ 0, 9, 20 ]
+
+
+Write a function `mapMutator` that accepts an array and a callback as arguments.
+The function should pass each element and index into the callback and use the result
+to overwrite elements of the original array, mutating the array.
 *******************************************************************************/
 
-let mapMutator = function (array, cb) {
-    for (let i = 0; i < array.length; i++) {
-        let ele = array[i]
-        let index = array.indexOf(ele);
-        if (index !== -1) {
-            array[index] = cb(ele, i)
-        }
-    }
-};
+const mapMutator = (array, cb) => {
+    array.forEach((ele, i) => {
+        array[i] = cb(ele, i);
+    });
+    return array;
+
+}
 
 
 // let arr1 = [4, 2, 6, 5];
@@ -40,7 +41,6 @@ let mapMutator = function (array, cb) {
 //     return el * i;
 // });
 // console.log(arr2); // [ 0, 9, 20 ]
-
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

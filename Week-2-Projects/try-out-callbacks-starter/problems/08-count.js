@@ -44,6 +44,7 @@ let count = function (array, cb) {
 };
 
 
+
 // let result1 = count([18, 5, 32, 7, 100], function (n) {
 //     return n % 2 === 0;
 // });
@@ -63,6 +64,7 @@ let count = function (array, cb) {
 //     return str.includes('x');
 // });
 // console.log(result4); // 0
+
 
 
 
