@@ -40,19 +40,13 @@ the accumulator should be set to the result of the callback.
 *******************************************************************************/
 
 let mySimpleReduce = function (array, cb) {
-    let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        let acc = array[i];
-        for (let j = i + 1; j < array.length; j++) {
-            const curr = array[j];
-
-            console.log(cb(acc, curr));
-            acc = curr;
-            sum += acc;
-        }
+    let accum = array[0]
+    for (let i = 1; i < array.length; i++) {
+        const element = array[i];
+        accum = cb(accum, element)
 
     }
-    return sum
+    return accum;
 };
 
 

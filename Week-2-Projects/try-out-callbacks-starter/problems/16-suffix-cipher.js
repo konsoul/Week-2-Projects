@@ -51,12 +51,13 @@ let suffixCipher = function (sentence, object) {
         for (let keys in object) {
             if (word.endsWith(keys)) {
                 array.push(object[keys](word))
+                return;
             }
         }
 
-        if (array.length < i + 1) {
-            array.push(word);
-        }
+
+        array.push(word);
+
 
     });
 
@@ -65,26 +66,26 @@ let suffixCipher = function (sentence, object) {
 
 
 
-// let cipher1 = {
-//     ly: function (word) {
-//         return word.slice(0, -1) + 'ee';
-//     },
-//     ize: function (word) {
-//         return word + 'r';
-//     }
-// };
-// console.log(suffixCipher('quietly and gently visualize', cipher1));
-// // quietlee and gentlee visualizer
+let cipher1 = {
+    ly: function (word) {
+        return word.slice(0, -1) + 'ee';
+    },
+    ize: function (word) {
+        return word + 'r';
+    }
+};
+console.log(suffixCipher('quietly and gently visualize', cipher1));
+// quietlee and gentlee visualizer
 
-// let cipher2 = {
-//     tal: function (word) {
-//         return word.toUpperCase();
-//     },
-//     s: function (word) {
-//         return word + 'th';
-//     }
-// };
-// console.log(suffixCipher('incremental progress is very instrumental', cipher2));
+let cipher2 = {
+    tal: function (word) {
+        return word.toUpperCase();
+    },
+    s: function (word) {
+        return word + 'th';
+    }
+};
+console.log(suffixCipher('incremental progress is very instrumental', cipher2));
 // INCREMENTAL progressth isth very INSTRUMENTAL
 
 

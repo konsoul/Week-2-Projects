@@ -41,11 +41,18 @@ the original elements into the callbacks in an alternating fashion.
 
 
 let alternatingMap = function (array, cb1, cb2) {
+    let newArray = [];
 
-    return array.reduce((acc, curr) => {
-        console.log(`our accumulator is ${acc}`);
-        console.log(`our current number is ${curr}`)
-    });
+    for (let i = 0; i < array.length - 1; i += 2) {
+        newArray.push(cb1(array[i]))
+        newArray.push(cb2(array[i + 1]))
+    }
+
+    if (newArray.length < array.length) {
+        newArray.push(cb1(array[array.length - 1]))
+    }
+    return newArray;
+
 };
 
 
