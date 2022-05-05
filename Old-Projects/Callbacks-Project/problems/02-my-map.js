@@ -12,9 +12,6 @@ let myMap = function (array, cb) {
     let newArray = [];
     for (let i = 0; i < array.length; i++) {
         newArray.push(cb(array[i]))
-        // let ele = array[i];
-        // let sqrt = cb(ele);
-        // newArray.push(sqrt)
     }
     return newArray;
 };

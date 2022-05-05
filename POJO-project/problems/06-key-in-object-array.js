@@ -32,20 +32,7 @@ function keyInObjectArray(objArray, keyString) {
 }
 
 
-
-// let objArray = [{
-//     name: "Rupert"
-//   },
-//   {
-//     age: 42
-//   },
-//   {
-//     planet: "Earth",
-//     system: "Milky Way"
-//   }
-// ];
-
-// console.log(keyInObjectArray(objArray, 'planet')); // => true
+console.log(keyInObjectArray(objArray, 'planet')); // => true
 // console.log(keyInObjectArray(objArray, 'age')); // => true
 // console.log(keyInObjectArray(objArray, 'food')); // => false
 // console.log(keyInObjectArray(objArray, 'animal')); // => false
